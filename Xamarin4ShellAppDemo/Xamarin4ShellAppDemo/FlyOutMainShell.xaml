@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+       xmlns:pages="clr-namespace:Xamarin4ShellAppDemo"
+             mc:Ignorable="d"
+             x:Class="Xamarin4ShellAppDemo.FlyOutMainShell"
+       Title="Fly Out Shell Main">
+
+    <!--<Shell.FlyoutHeaderTemplate>
+        <DataTemplate>
+            <Grid BackgroundColor="Black" HeightRequest="200">
+                <Image Source="img.jpg" Opacity="0.6"></Image>
+                <Label Text="OnLine Booking App" TextColor="Purple" 
+                       FontAttributes="Bold" 
+                       HorizontalOptions="Center" 
+                       VerticalOptions="Center">                    
+                </Label>
+            </Grid>
+        </DataTemplate>
+       </Shell.FlyoutHeaderTemplate>-->
+
+    <Shell.FlyoutHeader>
+        <pages:HeaderView></pages:HeaderView>
+    </Shell.FlyoutHeader>
+
+    <FlyoutItem Title="Cab Booking" Icon="ca.png">
+        <ShellContent ContentTemplate="{DataTemplate pages:CabBooking}">
+        </ShellContent>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Flight Booking" Icon="flight.png">
+        <ShellContent ContentTemplate="{DataTemplate pages:FlighBooking}"></ShellContent>
+    </FlyoutItem>
+
+
+</Shell>

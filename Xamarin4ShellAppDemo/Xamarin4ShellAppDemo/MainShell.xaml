@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:pages="clr-namespace:Xamarin4ShellAppDemo"
+             mc:Ignorable="d"
+       FlyoutBehavior="Disabled"
+             x:Class="Xamarin4ShellAppDemo.MainShell">
+
+    <!--<ShellItem>
+        <ShellContent>
+            <pages:MainPage></pages:MainPage> 
+        </ShellContent>
+    </ShellItem>-->
+
+    <!--<TabBar>
+        <Tab Title="Cab Booking" Icon="ca.png">
+            <ShellContent>
+                <pages:CabBooking></pages:CabBooking>
+            </ShellContent>
+        </Tab>
+
+        <Tab Title="Flight Booking" Icon="flight.png">
+            <pages:FlighBooking></pages:FlighBooking>
+        </Tab>
+    </TabBar>-->
+
+    <!--<TabBar>
+        <pages:CabBooking IconImageSource="ca.png"></pages:CabBooking>
+        <pages:FlighBooking IconImageSource="flight.png"></pages:FlighBooking>
+    </TabBar>-->
+
+    <Tab Title="Cab Booking" Icon="ca.png">
+        <ShellContent ContentTemplate="{DataTemplate pages:CabBooking}">         
+        </ShellContent>
+    </Tab>
+
+    <Tab Title="Flight Booking" Icon="flight.png">
+        <ShellContent ContentTemplate="{DataTemplate pages:FlighBooking}"></ShellContent>
+    </Tab>
+
+
+</Shell>
